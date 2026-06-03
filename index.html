@@ -1965,5 +1965,26 @@ function showResult() {
 
 showScreen('home');
 </script>
+  
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+
+    alert(
+      "speechSynthesis = " +
+      ("speechSynthesis" in window)
+    );
+
+    if ("speechSynthesis" in window) {
+      alert(
+        "voices = " +
+        speechSynthesis.getVoices().length
+      );
+    }
+
+  }, 2000);
+});
+</script>
+  
 </body>
 </html>
